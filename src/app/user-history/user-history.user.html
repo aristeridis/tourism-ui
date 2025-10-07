@@ -1,0 +1,10 @@
+<div class="user-history-container">
+  <h2>User Histories</h2>
+  <ul>
+    <li *ngFor="let history of histories">
+      <strong>ID:</strong> {{ history.id }},
+      <strong>Action:</strong> {{ history.action }},
+      <strong>Time:</strong> {{ history.timestamp }}
+    </li>
+  </ul>
+</div>
