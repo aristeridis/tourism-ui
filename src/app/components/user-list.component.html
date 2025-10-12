@@ -1,0 +1,14 @@
+<div class="user-list">
+  <h2>Users</h2>
+
+  <div *ngIf="loading">Loading...</div>
+  <div *ngIf="error" class="err">{{ error }}</div>
+
+  <ul *ngIf="!loading && users.length">
+    <li *ngFor="let user of users">
+      <strong>{{ user.username }}</strong> — {{ user.email }}
+    </li>
+  </ul>
+
+  <div *ngIf="!loading && users.length === 0">No users found.</div>
+</div>
