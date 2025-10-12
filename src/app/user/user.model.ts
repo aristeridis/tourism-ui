@@ -1,10 +1,8 @@
-import { UserHistory } from '../user-history/user-history.user';
-
 export interface User {
     id: number;
-    name: string;
+    username: string;
     email: string;
-    history: UserHistory[];
-    preferences?: string[];
-    lastVisited?: Date;
+    firstName?: string;
+    lastName?: string;
+    dateOfBirth?: string;
 }
