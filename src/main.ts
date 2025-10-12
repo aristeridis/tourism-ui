@@ -1,9 +1,7 @@
 import { bootstrapApplication } from '@angular/platform-browser';
+import { AppComponent } from './app/app.component';
 import { provideHttpClient } from '@angular/common/http';
-import { UserHistoryComponent } from './app/components/user-history.components';
 
-bootstrapApplication(UserHistoryComponent, {
-  providers: [
-    provideHttpClient()
-  ]
+bootstrapApplication(AppComponent, {
+  providers: [provideHttpClient()]
 });

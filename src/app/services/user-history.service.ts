@@ -7,7 +7,7 @@ import { UserHistory } from '../user-history/user-history.user';
   providedIn: 'root'
 })
 export class UserHistoryService {
-  private apiUrl = 'http://localhost:8080/api/history'; // προσαρμόζεις αν χρειάζεται
+  private apiUrl = 'http://localhost:8080/api/history';
 
   constructor(private http: HttpClient) { }
 
