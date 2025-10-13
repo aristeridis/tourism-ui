@@ -11,7 +11,8 @@ export class UserHistoryService {
 
   constructor(private http: HttpClient) { }
 
-  getUserHistories(): Observable<UserHistory[]> {
-    return this.http.get<UserHistory[]>(this.apiUrl);
+  getUserHistories(userId: number): Observable<UserHistory[]> {
+    return this.http.get<UserHistory[]>(`${this.apiUrl}/user/${userId}`);
   }
+
 }

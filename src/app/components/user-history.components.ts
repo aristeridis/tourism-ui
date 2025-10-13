@@ -13,13 +13,14 @@ import { UserHistory } from '../user-history/user-history.user';
 })
 export class UserHistoryComponent implements OnInit {
   histories: UserHistory[] = [];
+  userId: number = 2;
 
   constructor(private userHistoryService: UserHistoryService) { }
 
   ngOnInit(): void {
-    this.userHistoryService.getUserHistories().subscribe(
-      data => this.histories = data,
-      err => console.error('Error fetching user histories', err)
-    );
+    this.userHistoryService.getUserHistories(this.userId).subscribe({
+      next: (data) => this.histories = data,
+      error: (err) => console.error('Error fetching user histories', err)
+    });
   }
 }
