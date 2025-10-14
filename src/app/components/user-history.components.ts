@@ -13,7 +13,7 @@ import { UserHistory } from '../user-history/user-history.user';
 })
 export class UserHistoryComponent implements OnInit {
   histories: UserHistory[] = [];
-  userId: number = 2;
+  userId: number = 2;//dummy user id
 
   constructor(private userHistoryService: UserHistoryService) { }
 
