@@ -1,0 +1,14 @@
+<div class="recommendations-container">
+  <h2>Προτεινόμενα Σημεία Ενδιαφέροντος</h2>
+
+  <ul *ngIf="recommendations && recommendations.length > 0; else noResults">
+    <li *ngFor="let poi of recommendations">
+      <strong>{{ poi.name }}</strong> — {{ poi.category }}<br>
+      Βαθμολογία: {{ poi.rating }}
+    </li>
+  </ul>
+
+  <ng-template #noResults>
+    <p>Δεν υπάρχουν προτεινόμενα σημεία για τον χρήστη.</p>
+  </ng-template>
+</div>
